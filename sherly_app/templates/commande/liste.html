@@ -62,7 +62,7 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>DATE DE BL</th>
+                                <th><a href="#" onclick="sortTable(0)">Date de BL</a></th>
                                 <th>NOM CLIENT</th>
                                 <th>DATE DE CMDE</th>
                                 <th>N<sup>o</sup> BL</th>
@@ -71,10 +71,15 @@
                                 {% if user.is_superuser %}
                                 <th>ACTION</th>
                                 {% endif %}
+                              
 
                             </tr>
                         </thead>
                         <tbody>
+                            <div class="row">
+                               
+
+                            </div>
 
                             {% for item in bl_data %}
                                 <tr>
@@ -102,6 +107,31 @@
     </div>
 {% endblock %}
 {% block extra_js %}
+
+<script>
+    function sortTable(columnIndex) {
+        var table, rows, switching, i, x, y, shouldSwitch;
+        table = document.getElementById("myTable");
+        switching = true;
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("td")[columnIndex];
+                y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+            }
+        }
+    }
+    </script>
 
 {% endblock %}
 

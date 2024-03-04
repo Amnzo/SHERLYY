@@ -9,9 +9,22 @@
 
 <div class="container mt-4">
     <div class="container">
+        {% if messages %}
+                            <ul class="message-list">
+                            {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
         <div class="card">
-            <div class="card-header" style="background-color: #4CAF50; color: white;">
+            
+
+            <div class="card-header d-flex align-items-center justify-content-between" style="background-color: #4CAF50; color: white;">
                 <h2 class="mb-0">MODIFICATION SOCIÉTÉ - INFORMATIONS </h2>
+               
+                    <a href="{% url 'parametrage' %}" class="btn btn-primary btn-sm">
+                    <i class="fas fa-cog"></i>PARAMÈTRES DE MESSAGERIE
+                </a>
             </div>
             <div class="card-body">
                 <form method="post" enctype="multipart/form-data" id="companyForm">

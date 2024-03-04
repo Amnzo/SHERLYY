@@ -1,7 +1,9 @@
 from django import forms
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
-from .models import Famille, Produit,Societe
+
+from sherly_app.models import *
+
 class CustomLoginForm(forms.Form):
     username = forms.CharField(label='Username')
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
@@ -49,3 +51,12 @@ class CompanyForm(forms.ModelForm):
             except ValidationError:
                 raise forms.ValidationError("L'adresse email de boite de réception est invalide.")
         return boite_reception
+    
+
+
+
+# class EmailSettingsForm(forms.ModelForm):
+#     class Meta:
+#         model = EmailSettings
+#         fields = ['email_host_user', 'email_host_password']
+    

@@ -84,7 +84,16 @@
                         </div>
                         <!-- Second row for Quantity -->
                             <div class="form-row">
-                                <div class="form-group col-md-12">
+                                <div class="form-group col-md-3">
+                                    <label for="sphere">ADD</label>
+                                    <select class="form-control" id="add_d" name="add_d" required>
+                                        <option value="" disabled selected>CHOISIR</option>
+                                        {% for value in sphere_range %}
+                                            <option value="{{ value }}">{{ value }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-9">
                                     <label for="quatite_d">QUANTITÉ</label>
                                     <select class="form-control" id="quatite_d" name="quatite_d" required>
                                         <option value="" disabled selected>CHOISIR</option>
@@ -156,8 +165,17 @@
 
 
                         <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="sphere">ADD</label>
+                                <select class="form-control" id="add_g" name="add_g" required>
+                                    <option value="" disabled selected>CHOISIR</option>
+                                    {% for value in sphere_range %}
+                                        <option value="{{ value }}">{{ value }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
 
-                            <div class="form-group col-md-12">
+                            <div class="form-group col-md-9">
                                 <label for="axe">QUANTITÉ </label>
                                 <select class="form-control" id="quatite_g" name="quatite_g" required>
                                     <option value="" disabled selected>CHOISIR</option>

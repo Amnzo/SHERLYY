@@ -1,5 +1,6 @@
 
 
+from decimal import Decimal
 import os
 
 from django.http import JsonResponse
@@ -11,7 +12,8 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 
 from SHERLY.settings import PDFKIT_CONFIG
-from .forms import CompanyForm, CustomLoginForm, CustomUserRegistrationForm, ProduitForm
+from forms import *
+
 from .models import *
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import EmailMessage
@@ -106,6 +108,23 @@ def fetch_related_products_in_liste(request):
     print(list(products))  # Check the output in your server console
     return JsonResponse(list(products), safe=False)
 #-------------------------------------------------------------------------
+def parametrage(request):
+    parametrage = EmailSettings.objects.first()
+    if request.method == 'POST':
+        form = EmailSettingsForm(request.POST, instance=parametrage)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'LES PARAMETRE DE MESSAGRIE ON ETAIT BIEN MODIFIER')
+            return redirect('company')  # Redirect to success page
+        else :
+            return render(request, 'company/parametrage.html', {'form': form})
+        
+    else:
+         
+        
+        form = EmailSettingsForm(instance=parametrage)
+
+        return render(request, 'company/parametrage.html',{'form': form})
 def company(request):
         societe = Societe.objects.first()
         if request.method == 'POST':
@@ -158,6 +177,7 @@ def add_commande(request):
                         sphere_d=form_data.get('sphere_d'),sphere_g=form_data.get('sphere_g'),
                         cylindre_d=form_data.get('cylindre_d'),cylindre_g=form_data.get('cylindre_g'),
                         axe_d=form_data.get('axe_d'),axe_g=form_data.get('axe_g'),
+                        add_d=form_data.get('add_d'),add_g=form_data.get('add_g'),
                         quatite_d=form_data.get('quatite_d'),quatite_g=form_data.get('quatite_g'),
                         user=request.user,
                         no_cmde=no_cmde,
@@ -310,6 +330,8 @@ def edit_commande(request,bl_id):
         cylindre_g=request.POST.get('cylindre_g')
         axe_d=request.POST.get('axe_d')
         axe_g=request.POST.get('axe_g')
+        add_d=request.POST.get('add_d')
+        add_g=request.POST.get('add_g')
         quatite_d=request.POST.get('quatite_d')
         quatite_g=request.POST.get('quatite_g')
         print(date_de_bl)
@@ -320,6 +342,8 @@ def edit_commande(request,bl_id):
         bon_livraison.date_de_bl=date_de_bl
         bon_livraison.bon_commande.sphere_d=sphere_d
         bon_livraison.bon_commande.sphere_g=sphere_g
+        bon_livraison.bon_commande.add_d=add_d
+        bon_livraison.bon_commande.add_g=add_g
         bon_livraison.bon_commande.cylindre_d=cylindre_d
         bon_livraison.bon_commande.cylindre_g=cylindre_g
         bon_livraison.bon_commande.axe_d=int(float(axe_d))
@@ -432,20 +456,47 @@ def add_product(request):
 
         familles = Famille.objects.filter(is_active=True)
         return render(request,'produits/ajouter.html',{'familles':familles})
-
+from django.utils import timezone
+import calendar
 def hotmail(request):
-    print("Try to send to hotmail")
-    subject = 'Subject here from chdlol lmdlol'
-    message = 'Here is the message.'
-    from_email = 'aslal-salmi@hotmail.fr'
-    recipient_list = ['salmi.ensa.ilsi@gmail.com']
+    # Define email settings
 
-    try:
-        print("Recipient List:", recipient_list)  # Check the value of recipient_list
-        send_mail(subject, message, from_email, recipient_list)
-        return HttpResponse("Email sent successfully.")
-    except Exception as e:
-        return HttpResponse(f"Email sending failed because offff: {str(e)}")
+
+    email_settings = EmailSettings.objects.first()
+    if email_settings:
+        # Assign each field to a variable
+        email_backend = email_settings.EMAIL_BACKEND
+        email_host = email_settings.EMAIL_HOST
+        email_host_user = email_settings.EMAIL_HOST_USER
+        email_host_password = email_settings.EMAIL_HOST_PASSWORD
+        email_port = email_settings.EMAIL_PORT
+        email_use_tls = email_settings.EMAIL_USE_TLS
+        default_from_email = email_settings.DEFAULT_FROM_EMAIL
+        server_email = email_settings.SERVER_EMAIL
+    print(email_settings)
+
+    # Set email backend and other settings dynamically
+    settings.EMAIL_BACKEND = email_backend
+    settings.EMAIL_HOST = email_host
+    settings.EMAIL_HOST_USER = email_host_user
+    settings.EMAIL_HOST_PASSWORD = email_host_password
+    settings.EMAIL_PORT = email_port
+    settings.EMAIL_USE_TLS = email_use_tls
+    settings.DEFAULT_FROM_EMAIL = default_from_email
+    settings.SERVER_EMAIL = server_email
+
+    # Create email message
+    subject = f'Subject from database  here azzozia t3jb nta '
+    message = 'Message here'
+    from_email = settings.DEFAULT_FROM_EMAIL
+    recipient_list = ['salmi.ensa.ilsi@gmail.com']
+    email = EmailMessage(subject, message, from_email, recipient_list)
+
+    # Send email
+    email.send()
+    return HttpResponse("sendddd")
+
+
 
 
 
@@ -537,11 +588,12 @@ from django.http import HttpResponse, FileResponse
 from django.template.loader import render_to_string
 from django.urls import reverse
 from .models import Bon_Livraison, Societe,Facture
-
+import os
+import tempfile
+import PyPDF2
 def generate_pdf(request, bl_id):
     try:
         bon_livraison = Bon_Livraison.objects.get(pk=bl_id)
-
         societe = Societe.objects.first()
 
         # Read logo image file and encode it as base64
@@ -560,16 +612,25 @@ def generate_pdf(request, bl_id):
             temp_file.seek(0)
             file_path = temp_file.name
 
-        # Return the PDF file as a response for download
-        response = FileResponse(open(file_path, 'rb'), content_type='application/pdf')
+        # Set permissions to make the PDF non-editable
+        writer = PyPDF2.PdfWriter()
+        reader = PyPDF2.PdfReader(file_path)
+        writer.add_page(reader.pages[0])
+        
+        writer.encrypt('', '', 0, False)
+
+        # Write the PDF to a new file
+        with open(file_path + '_secured.pdf', 'wb') as output_file:
+            writer.write(output_file)
+
+        # Return the secured PDF file as a response for download
+        response = FileResponse(open(file_path + '_secured.pdf', 'rb'), content_type='application/pdf')
         response['Content-Disposition'] = f'attachment; filename="bon_livraison_{bon_livraison.no_bl}.pdf"'
         return response
 
     except Bon_Livraison.DoesNotExist:
-        logger.error("Bon Livraison not found")
         return HttpResponse("Bon Livraison not found", status=404)
     except Exception as e:
-        logger.error(f"Error: {e}")
         return HttpResponse("Internal Server Error", status=500)
 
 
@@ -612,6 +673,7 @@ def edit_facture(request):
 def generate_facture(request):
     facture = Facture.objects.first()
     societe = Societe.objects.first()
+    total_= 0
     with open(societe.logo.path, "rb") as image_file:
             logo_base64 = base64.b64encode(image_file.read()).decode('utf-8')
 
@@ -624,29 +686,35 @@ def generate_facture(request):
     bon_ids_list = [int(bon_id) for bon_id in bon_ids.strip('[]').split(',')]
 
     bons_livraison = Bon_Livraison.objects.filter(pk__in=bon_ids_list)
+    for bon_livraison in bons_livraison:
+        total_ += (bon_livraison.bon_commande.produit_d.prix * bon_livraison.bon_commande.quatite_d)+(bon_livraison.bon_commande.produit_g.prix * bon_livraison.bon_commande.quatite_g)
     context = {
         'bons_livraison':bons_livraison,
         'logo_base64':logo_base64,
         'societe': societe,
         'num_facture':num_facture,
         'date_facture':date_facture,
-        'facture':facture
+        'facture':facture,
+        'total_':total_,
+        'tva' : total_ * Decimal('0.20'),
+        'total_ttc': (total_ * Decimal('0.20'))+total_,
     }
     #return render(request,'facture/telechargement_facture.html', context)
     html = render_to_string('facture/telechargement_facture.html', context)
     config = pdfkit.configuration(wkhtmltopdf=PDFKIT_CONFIG['wkhtmltopdf'])
     pdf = pdfkit.from_string(html, False, options={'encoding': 'UTF-8'}, configuration=config)
 
-    #     # Write the PDF content to a temporary file
+    # #     # Write the PDF content to a temporary file
     with tempfile.NamedTemporaryFile(delete=False) as temp_file:
             temp_file.write(pdf)
             temp_file.seek(0)
             file_path = temp_file.name
 
-    #     # Return the PDF file as a response for download
+     #     # Return the PDF file as a response for download
     response = FileResponse(open(file_path, 'rb'), content_type='application/pdf')
     response['Content-Disposition'] = f'attachment; filename="Facture__{num_facture}.pdf"'
     return response
+
 
 
 #---------------------Facture-----------------------------
@@ -688,17 +756,48 @@ def facture(request):
             continue
         else:
             numero_facture = f'{mois.replace("-", "")}'
+            existing_invoice = Invoice.objects.filter(mois_concerne=mois_concerne).first()
             liste_factures.append({
-                'mois_concerne': mois,
+                'mois_concerne': mois.strftime('%m-%Y'),
                 'numero_facture': f'{int(numero_facture)+90}',
                 'nombre_bons': len(bon_ids),  # Use the count of IDs
                 'displayed_day': next_day.strftime('%Y-%m-%d'),
                 'bon_ids': bon_ids  # Pass the list of Bon_Livraison IDs
             })
+            print(mois,)
+            print(numero_facture)
 
     return render(request, 'facture/liste_facture.html', {'liste_factures': liste_factures})
 
 
+
+
+def periode(request):
+    if request.method == 'POST':
+        start_date = request.POST.get('startDate')
+        end_date = request.POST.get('endDate')  
+        # Convert start_date and end_date strings to datetime objects
+        start_date = datetime.strptime(start_date, '%Y-%m-%d')
+        end_date = datetime.strptime(end_date, '%Y-%m-%d')
+
+        bons_livraison = Bon_Livraison.objects.filter(date_de_bl__range=(start_date, end_date))
+        bons_livraison_ids = list(bons_livraison.values_list('id', flat=True)) 
+        print(bons_livraison)
+        print(bons_livraison_ids)
+        numero_facture = end_date.strftime('%Y%m%d')
+        numero_facture = str(int(numero_facture) + 90)
+        context = {
+            'mois_concerne': end_date.strftime('%Y-%m-%d'),
+            'nombre_bons': len(bons_livraison),
+            'displayed_day':end_date.strftime('%Y-%m-%d'),
+            'bon_ids': bons_livraison_ids,
+            'numero_facture': f'{int(numero_facture)+90}',
+            'start_date': start_date,
+            'end_date': end_date,
+
+        }     
+        return  render(request,'facture/facture_periode.html',context)
+    return render(request,'facture/facture_periode.html')
 
 
 

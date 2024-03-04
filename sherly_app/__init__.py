@@ -1,4 +1,6 @@
 # yourapp/__init__.py
+default_app_config = 'sherly_app.apps.SherlyAppConfig'
+
 from django.apps import AppConfig
 
 default_app_config = 'yourapp.apps.YourAppConfig'

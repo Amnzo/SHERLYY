@@ -12,7 +12,13 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
 
+LANGUAGES = [
+    ('fr', _('French')),
+    ('en', _('English')),
+    ('es', _('Spanish')),
+]
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -90,6 +96,8 @@ DATABASES = {
 
 
 
+
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -145,14 +153,14 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'sherly_app/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Email
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.office365.com'
-EMAIL_HOST_USER = 'aslal-salmi@hotmail.fr'
+EMAIL_BACKEND = ''
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'aslal-salmi@hotmail.fr'
-SERVER_EMAIL = 'aslal-salmi@hotmail.fr'
+DEFAULT_FROM_EMAIL = ''
+SERVER_EMAIL = ''
 # Email
 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -18,4 +18,5 @@ class Bon_LivraisonAdmin(admin.ModelAdmin):
     list_display = ('id', 'date_de_bl', 'no_bl')  # Add the fields you want to display in the list
 
 admin.site.register(Bon_Livraison, Bon_LivraisonAdmin)
+admin.site.register(EmailSettings)
 

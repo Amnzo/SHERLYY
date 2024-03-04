@@ -1,5 +1,6 @@
 <!-- templates/base.html -->
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -179,7 +180,8 @@
                 <li>
                     <a href="{% url 'profile' %}" title="USERS">
 
-                        <i class="fas fa-user-circle"></i> PROFIL ADMIN
+                        <i class="fas fa-user-circle"></i> {% trans "PROFIL ADMIN" %}
+                     
                     </a>
                 </li>
                 <li>

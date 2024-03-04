@@ -89,6 +89,7 @@ class Bon_Commande(models.Model):
     sphere_d = models.FloatField()
     cylindre_d = models.FloatField()
     axe_d = models.IntegerField()
+    add_d = models.FloatField(default=0)
     quatite_d = models.IntegerField()
 
     categorie_g = models.ForeignKey(Famille, on_delete=models.CASCADE, related_name='commandes_g')
@@ -96,6 +97,7 @@ class Bon_Commande(models.Model):
     sphere_g = models.FloatField()
     cylindre_g = models.FloatField()
     axe_g = models.IntegerField()
+    add_g = models.FloatField(default=0)
     quatite_g = models.IntegerField()
     date_de_cmd = models.DateTimeField(default=timezone.now)
     no_cmde = models.CharField(max_length=20, unique=True, editable=False,default='DEFAULT_VALUE')
@@ -134,3 +136,22 @@ class Facture(models.Model):
     nif_facture=models.CharField(max_length=100,blank=True,null=True,default='NIF:B062835052-Nº IVA : ESB068350201152')
     def __str__(self):
         return f'Facture Numero {self.id}----{self.col1} '
+    
+
+
+class EmailSettings(models.Model):
+    EMAIL_BACKEND = models.CharField(max_length=100, default='django.core.mail.backends.smtp.EmailBackend')
+    EMAIL_HOST = models.CharField(max_length=100, default='smtp.office365.com')
+    EMAIL_HOST_USER = models.EmailField(default='sherylopticalstrategy@hotmail.com')
+    EMAIL_HOST_PASSWORD = models.CharField(max_length=100, default='vdqlnfmsvtwsusyf')
+    EMAIL_PORT = models.IntegerField(default=587)
+    EMAIL_USE_TLS = models.BooleanField(default=True)
+    DEFAULT_FROM_EMAIL = models.EmailField(default='sherylopticalstrategy@hotmail.com')
+    SERVER_EMAIL = models.EmailField(default='sherylopticalstrategy@hotmail.com')
+
+    def __str__(self):
+        return "Email Settings"
+    @staticmethod
+    def get_email_settings():
+        # Retournez les paramètres d'envoi d'e-mails
+        return EmailSettings.objects.first()  # Ou tout autre logique pour récupérer les paramètres
