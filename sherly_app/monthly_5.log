@@ -1,0 +1,114 @@
+2024-03-30 17:50:14,784 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-03-30 17:50:14,786 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-03-30 17:50:14,786 - INFO - next_month
+2024-03-30 17:50:14,786 - INFO - 2024-04-04 17:50:14.786563+00:00
+2024-03-30 17:50:14,786 - INFO -  current_date=2024-03-30 17:50:14.786563+00:00 
+2024-03-30 17:50:14,786 - INFO - 2024-03-30 17:50:14.786563+00:00 - 30 days, 0:00:00=2024-02-29 17:50:14.786563+00:00
+2024-03-30 17:50:14,786 - INFO - last_month is = 2024-02-29 17:50:14.786563+00:00
+2024-03-30 17:50:14,786 - INFO - 2024-02-29 17:50:14.786563+00:00
+2024-03-30 17:50:14,787 - INFO - first_day_last_month = {first_day_last_month} 
+2024-03-30 17:50:14,787 - INFO - last_day_last_month=2024-02-29 17:50:14.786563+00:00
+2024-03-30 17:50:14,996 - INFO - RESULTAT DE LA FACTURE=<QuerySet [<Bon_Livraison: Bon_Livraison for 202402261----68----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269248----69----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269522----70----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711250----76----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711552----77----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711858----78----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022812168----85----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022814450----86----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815138----89----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815842----90----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022816562----92----2024-02-28 00:00:00+00:00 >]>
+2024-03-30 17:50:14,996 - INFO - <QuerySet [<Bon_Livraison: Bon_Livraison for 202402261----68----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269248----69----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269522----70----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711250----76----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711552----77----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711858----78----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022812168----85----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022814450----86----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815138----89----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815842----90----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022816562----92----2024-02-28 00:00:00+00:00 >]>
+2024-03-30 17:52:12,649 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-03-30 17:52:12,649 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-03-30 17:52:12,650 - INFO - next_month
+2024-03-30 17:52:12,650 - INFO - 2024-04-04 17:52:12.649984+00:00
+2024-03-30 17:52:12,650 - INFO -  current_date=2024-03-30 17:52:12.649984+00:00 
+2024-03-30 17:52:12,650 - INFO - 2024-03-30 17:52:12.649984+00:00 - 30 days, 0:00:00=2024-02-29 17:52:12.649984+00:00
+2024-03-30 17:52:12,650 - INFO - last_month is = 2024-02-29 17:52:12.649984+00:00
+2024-03-30 17:52:12,650 - INFO - 2024-02-29 17:52:12.649984+00:00
+2024-03-30 17:52:12,650 - INFO - first_day_last_month = {first_day_last_month} 
+2024-03-30 17:52:12,650 - INFO - last_day_last_month=2024-02-29 17:52:12.649984+00:00
+2024-03-30 17:52:12,782 - INFO - RESULTAT DE LA FACTURE=<QuerySet [<Bon_Livraison: Bon_Livraison for 202402261----68----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269248----69----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269522----70----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711250----76----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711552----77----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711858----78----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022812168----85----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022814450----86----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815138----89----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815842----90----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022816562----92----2024-02-28 00:00:00+00:00 >]>
+2024-03-30 17:52:12,782 - INFO - <QuerySet [<Bon_Livraison: Bon_Livraison for 202402261----68----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269248----69----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269522----70----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711250----76----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711552----77----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711858----78----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022812168----85----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022814450----86----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815138----89----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815842----90----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022816562----92----2024-02-28 00:00:00+00:00 >]>
+2024-03-30 17:52:13,231 - INFO - TOTAL  DE LA FACTURE=1623.79
+2024-03-30 17:52:13,297 - INFO - periode----------
+2024-03-30 17:52:13,297 - INFO - 02-2024
+2024-03-30 17:52:13,335 - INFO - CREATEING NEW INVOICE 
+2024-03-30 17:52:15,454 - INFO - email_settings= Email Settings
+2024-03-30 17:52:15,454 - INFO -  societe.boite_reception= gestioncommandes@hotmail.com
+2024-03-30 17:54:09,710 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-03-30 17:54:09,711 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-03-30 17:54:09,711 - INFO - next_month
+2024-03-30 17:54:09,711 - INFO - 2024-04-04 17:54:09.711202+00:00
+2024-03-30 17:54:09,711 - INFO -  current_date=2024-03-30 17:54:09.711202+00:00 
+2024-03-30 17:54:09,711 - INFO - 2024-03-30 17:54:09.711202+00:00 - 30 days, 0:00:00=2024-02-29 17:54:09.711202+00:00
+2024-03-30 17:54:09,711 - INFO - last_month is = 2024-02-29 17:54:09.711202+00:00
+2024-03-30 17:54:09,711 - INFO - 2024-02-29 17:54:09.711202+00:00
+2024-03-30 17:54:09,711 - INFO - first_day_last_month = {first_day_last_month} 
+2024-03-30 17:54:09,711 - INFO - last_day_last_month=2024-02-29 17:54:09.711202+00:00
+2024-03-30 17:54:09,829 - INFO - RESULTAT DE LA FACTURE=<QuerySet [<Bon_Livraison: Bon_Livraison for 202402261----68----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269248----69----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269522----70----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711250----76----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711552----77----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711858----78----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022812168----85----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022814450----86----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815138----89----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815842----90----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022816562----92----2024-02-28 00:00:00+00:00 >]>
+2024-03-30 17:54:09,829 - INFO - <QuerySet [<Bon_Livraison: Bon_Livraison for 202402261----68----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269248----69----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269522----70----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711250----76----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711552----77----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711858----78----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022812168----85----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022814450----86----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815138----89----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815842----90----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022816562----92----2024-02-28 00:00:00+00:00 >]>
+2024-03-30 17:54:10,458 - INFO - TOTAL  DE LA FACTURE=1623.79
+2024-03-30 17:54:10,472 - INFO - periode----------
+2024-03-30 17:54:10,472 - INFO - 02-2024
+2024-03-30 17:54:10,479 - INFO - CREATEING NEW INVOICE 
+2024-03-30 17:54:11,303 - INFO - email_settings= Email Settings
+2024-03-30 17:54:11,304 - INFO -  societe.boite_reception= gestioncommandes@hotmail.com
+2024-03-30 17:58:10,636 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-03-30 17:58:10,637 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-03-30 17:58:10,637 - INFO - next_month
+2024-03-30 17:58:10,637 - INFO - 2024-04-04 17:58:10.637376+00:00
+2024-03-30 17:58:10,637 - INFO -  current_date=2024-03-30 17:58:10.637376+00:00 
+2024-03-30 17:58:10,637 - INFO - 2024-03-30 17:58:10.637376+00:00 - 30 days, 0:00:00=2024-02-29 17:58:10.637376+00:00
+2024-03-30 17:58:10,637 - INFO - last_month is = 2024-02-29 17:58:10.637376+00:00
+2024-03-30 17:58:10,637 - INFO - 2024-02-29 17:58:10.637376+00:00
+2024-03-30 17:58:10,637 - INFO - first_day_last_month = {first_day_last_month} 
+2024-03-30 17:58:10,637 - INFO - last_day_last_month=2024-02-29 17:58:10.637376+00:00
+2024-03-30 17:58:10,882 - INFO - RESULTAT DE LA FACTURE=<QuerySet [<Bon_Livraison: Bon_Livraison for 202402261----68----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269248----69----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269522----70----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711250----76----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711552----77----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711858----78----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022812168----85----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022814450----86----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815138----89----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815842----90----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022816562----92----2024-02-28 00:00:00+00:00 >]>
+2024-03-30 17:58:10,882 - INFO - <QuerySet [<Bon_Livraison: Bon_Livraison for 202402261----68----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269248----69----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 202402269522----70----2024-02-26 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711250----76----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711552----77----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022711858----78----2024-02-27 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022812168----85----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022814450----86----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815138----89----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022815842----90----2024-02-28 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024022816562----92----2024-02-28 00:00:00+00:00 >]>
+2024-03-30 17:58:11,353 - INFO - TOTAL  DE LA FACTURE=1623.79
+2024-03-30 17:58:11,366 - INFO - periode----------
+2024-03-30 17:58:11,366 - INFO - 02-2024
+2024-03-30 17:58:11,375 - INFO - CREATEING NEW INVOICE 
+2024-03-30 17:58:12,583 - INFO - email_settings= Email Settings
+2024-03-30 17:58:12,583 - INFO -  societe.boite_reception= gestioncommandes@hotmail.com
+2024-03-30 22:00:31,488 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-03-30 22:00:31,489 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-03-30 22:00:31,489 - INFO - next_month
+2024-03-30 22:00:31,489 - INFO - 2024-04-04 22:00:31.489875+00:00
+2024-03-30 22:00:31,490 - INFO - Today is not the scheduled day for sending invoices.
+2024-03-31 22:00:33,229 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-03-31 22:00:33,232 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-03-31 22:00:33,232 - INFO - next_month
+2024-03-31 22:00:33,232 - INFO - 2024-04-04 22:00:33.232201+00:00
+2024-03-31 22:00:33,232 - INFO - Today is not the scheduled day for sending invoices.
+2024-04-01 22:00:34,220 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-04-01 22:00:34,221 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-04-01 22:00:34,221 - INFO - next_month
+2024-04-01 22:00:34,221 - INFO - 2024-05-05 22:00:34.221522+00:00
+2024-04-01 22:00:34,221 - INFO - Today is not the scheduled day for sending invoices.
+2024-04-02 22:00:34,495 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-04-02 22:00:34,499 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-04-02 22:00:34,499 - INFO - next_month
+2024-04-02 22:00:34,499 - INFO - 2024-05-05 22:00:34.499348+00:00
+2024-04-02 22:00:34,499 - INFO - Today is not the scheduled day for sending invoices.
+2024-04-03 22:00:33,897 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-04-03 22:00:33,905 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-04-03 22:00:33,905 - INFO - next_month
+2024-04-03 22:00:33,906 - INFO - 2024-05-05 22:00:33.905922+00:00
+2024-04-03 22:00:33,906 - INFO - Today is not the scheduled day for sending invoices.
+2024-04-04 22:00:36,793 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-04-04 22:00:36,794 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-04-04 22:00:36,794 - INFO - next_month
+2024-04-04 22:00:36,794 - INFO - 2024-05-05 22:00:36.794302+00:00
+2024-04-04 22:00:36,794 - INFO - Today is not the scheduled day for sending invoices.
+2024-04-05 22:00:37,444 - INFO - ---------------Starting fetching data to send by email Montly-----------------
+2024-04-05 22:00:37,457 - INFO - ---------------PREPARATION FACTURE for  end+5-----------------
+2024-04-05 22:00:37,461 - INFO - next_month
+2024-04-05 22:00:37,461 - INFO - 2024-05-05 22:00:37.461692+00:00
+2024-04-05 22:00:37,462 - INFO -  current_date=2024-04-05 22:00:37.461692+00:00 
+2024-04-05 22:00:37,462 - INFO - 2024-04-05 22:00:37.461692+00:00 - 5 days, 0:00:00=2024-03-31 22:00:37.461692+00:00
+2024-04-05 22:00:37,462 - INFO - last_month is = 2024-03-31 22:00:37.461692+00:00
+2024-04-05 22:00:37,462 - INFO - 2024-03-31 22:00:37.461692+00:00
+2024-04-05 22:00:37,462 - INFO - first_day_last_month = {first_day_last_month} 
+2024-04-05 22:00:37,462 - INFO - last_day_last_month=2024-03-31 22:00:37.461692+00:00
+2024-04-05 22:00:37,633 - INFO - RESULTAT DE LA FACTURE=<QuerySet [<Bon_Livraison: Bon_Livraison for 2024030416928----93----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030417298----94----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030418050----96----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030418432----97----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030418818----98----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030419208----99----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030419602----100----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030420000----101----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030620402----103----2024-03-06 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030621218----104----2024-03-06 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030621632----105----2024-03-06 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030722050----106----2024-03-07 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030722472----107----2024-03-07 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030722898----108----2024-03-07 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030823328----109----2024-03-08 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030823762----110----2024-03-08 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030824200----111----2024-03-08 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030824642----112----2024-03-08 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030825088----113----2024-03-08 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030825538----114----2024-03-08 00:00:00+00:00 >, '...(remaining elements truncated)...']>
+2024-04-05 22:00:37,633 - INFO - <QuerySet [<Bon_Livraison: Bon_Livraison for 2024030416928----93----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030417298----94----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030418050----96----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030418432----97----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030418818----98----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030419208----99----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030419602----100----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030420000----101----2024-03-04 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030620402----103----2024-03-06 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030621218----104----2024-03-06 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030621632----105----2024-03-06 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030722050----106----2024-03-07 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030722472----107----2024-03-07 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030722898----108----2024-03-07 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030823328----109----2024-03-08 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030823762----110----2024-03-08 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030824200----111----2024-03-08 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030824642----112----2024-03-08 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030825088----113----2024-03-08 00:00:00+00:00 >, <Bon_Livraison: Bon_Livraison for 2024030825538----114----2024-03-08 00:00:00+00:00 >, '...(remaining elements truncated)...']>
+2024-04-05 22:00:39,109 - INFO - TOTAL  DE LA FACTURE=11508.31
+2024-04-05 22:00:39,169 - INFO - periode----------
+2024-04-05 22:00:39,605 - INFO - 03-2024
+2024-04-05 22:00:39,680 - INFO - CREATEING NEW INVOICE 
+2024-04-05 22:00:45,288 - INFO - email_settings= Email Settings
+2024-04-05 22:00:45,288 - INFO -  societe.boite_reception= gestioncommandes@hotmail.com

@@ -1,0 +1,38 @@
+{% extends 'base_vitrine.html' %}
+
+{% block title %}
+    Détails du Produit - {{ product.designation }}
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card border-0 shadow-lg">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!-- Affichage de l'image du produit -->
+                            {% for image in product.image_set.all %}
+                            <img src="{{ image.image.url }}" class="card-img-top img-fluid rounded" alt="{{ product.designation }}">
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="card-title">{{ product.designation }}</h3>
+                            <p class="card-text"><i class="fas fa-tags"></i> CATEGORÍA: {{ product.famille }}</p>
+                            <p class="card-text"><i class="fas fa-box"></i> CONDICIONAMIENTO: {{ product.conditionnement_count }}</p>
+                            <hr>
+                            <h5>Description:</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit, felis nec placerat euismod, libero ligula dapibus justo, eget interdum urna nisi sit amet odio. Integer ut velit at metus eleifend vehicula. Aliquam vestibulum vitae lectus a tincidunt. Nullam bibendum arcu at ligula bibendum, a faucibus sem efficitur. Nulla lobortis nulla sit amet orci posuere, ac viverra purus ultrices. Curabitur mollis purus ac velit hendrerit, eget consequat libero rutrum.
+                            </p>
+                            <!-- Ajoutez d'autres détails du produit ici -->
+                            <a href="{% url 'vitrine' %}" class="btn btn-primary mt-3"><i class="fas fa-arrow-left"></i> VUELTA A LOS PRODUCTOS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
