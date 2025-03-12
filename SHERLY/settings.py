@@ -151,26 +151,9 @@ DEFAULT_FROM_EMAIL = ''
 SERVER_EMAIL = ''
 # Email
 
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-#EMAIL_HOST = 'smtp.office365.com'
-#EMAIL_HOST_USER = 'aslal-salmi@hotmail.fr'
-#EMAIL_HOST_PASSWORD = 'mhphnqtwculehajq'
-#EMAIL_PORT = 587
-#EMAIL_USE_TLS = True
-#DEFAULT_FROM_EMAIL = 'aslal-salmi@hotmail.fr'
-#SERVER_EMAIL = 'aslal-salmi@hotmail.fr'
-#sherylopticalstrategy@hotmail.com
-#vdqlnfmsvtwsusyf
 
 
-# EMAIL_HOST_PASSWORD = ' UVQ6D-48EFA-5G6BG-MRURW-LKKA7'  # Mot de passe de votre compte Hotmail
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp-mail.outlook.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'aslal-salmi@hotmail.fr'  # Your Hotmail email address
-# EMAIL_HOST_PASSWORD = 'UVQ6D-48EFA-5G6BG-MRURW-LKKA7'
 
 
 #PDFKIT_CONFIG = {
