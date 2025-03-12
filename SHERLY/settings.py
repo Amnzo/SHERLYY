@@ -82,16 +82,7 @@ WSGI_APPLICATION = 'SHERLY.wsgi.application'
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sherylstrategy$default',
-        'USER': 'sherylstrategy',
-        'PASSWORD': 'salmi@ensa123',
-        'HOST': 'sherylstrategy.mysql.pythonanywhere-services.com',   # Or your MySQL server's hostname
-        'PORT': '3306',        # Or your MySQL server's port
-    }
-}
+
 
 
 
